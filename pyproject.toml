@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+version = "0.1"
+name = "lona-html5-qrcode"
+description = "Html5-QRCode bindings for Lona"
+
+authors = [
+  { name="Florian Scherf", email="mail@florianscherf.de" },
+]
+
+license = { file="LICENSE.txt" }
+readme = "README.md"
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+#  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+
+requires-python = ">=3.7"
+
+dependencies = [
+  "lona>=1.12.1",
+]
+
+
+[project.optional-dependencies]
+packaging = [
+  "build",
+  "twine",
+]
+
+dev = [
+  "lona-picocss",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/lona-web-org/lona-html5-qrcode"
+"Repository" = "https://github.com/lona-web-org/lona-html5-qrcode"
+"Bug Tracker" = "https://github.com/lona-web-org/lona-html5-qrcode/issues"
+
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["lona_html5_qrcode*"]
+
+[tool.setuptools.package-data]
+"lona_html5_qrcode.static" = ["**"]
+"lona_html5_qrcode.templates" = ["**"]
+
+[tool.setuptools.exclude-package-data]
+"*" = [
+  ".*",
+  "~*",
+  "*.swp",
+  "*.pyc",
+]

@@ -1,0 +1,8 @@
+/* lona-picocss ------------------------------------------------------------ */
+.html5-qrcode-picocss {
+    border: 0 !important;
+}
+
+[data-theme="dark"] .html5-qrcode-picocss img {
+    filter: invert(100%);
+}
